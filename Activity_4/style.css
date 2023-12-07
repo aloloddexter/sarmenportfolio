@@ -1,0 +1,116 @@
+/* Container style */
+div {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form style */
+h2 {
+  text-align: center;
+}
+
+form {
+  text-align: left;
+}
+
+/* Form input style */
+input[type="text"],
+input[type="password"] {
+  width: 95%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  
+}
+/* Form input style */
+select {
+width: 100%;
+padding: 10px;
+margin: 5px 0;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+/* Submit button style */
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #1877f2;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+  background-color: #0e5cbf;
+}
+
+/* Link style */
+a {
+  text-decoration: none;
+  color: #1877f2;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Link hover effect */
+a:hover {
+  text-decoration: underline;
+}
+/* Common styles for all dashboards */
+body {
+font-family: Arial, sans-serif;
+text-align: center;
+background-color: #f4f4f4;
+margin: 0;
+padding: 0;
+}
+
+h2 {
+color: #333;
+margin-top: 20px;
+}
+
+.logout-button {
+display: inline-block;
+padding: 10px 20px;
+background-color: #007bff;
+color: #fff;
+text-decoration: none;
+border-radius: 5px;
+margin-top: 20px;
+}
+
+.logout-button:hover {
+background-color: #0056b3;
+}
+
+/* Specific styles for each dashboard */
+/* Admin Dashboard */
+.admin-dashboard h2 {
+color: #ff5722;
+}
+
+/* User Dashboard */
+.user-dashboard h2 {
+color: #4caf50;
+}
+
+/* Customer Dashboard */
+.customer-dashboard h2 {
+color: #e91e63;
+}
+
+/* Encoder Dashboard */
+.encoder-dashboard h2 {
+color: #9c27b0;
+}

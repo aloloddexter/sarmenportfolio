@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Jean Sarmen</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+ 
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <a href="#" class="logo">Jean Sarmen</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#about">About<i class='bx bx-chevron-down dropdown__icon'></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../personal.html">Personal Background</a></li>
+                    <li><a href="../educational.html">Educational Background</a></li>
+                    <li><a href="../family.html">Family Background</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#Activies">Activities<i class='bx bx-chevron-down dropdown__icon'></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../Activity_1/sarmen.html">Activity 1</a></li>
+                    <li><a href="../Activity_2/act_2.html">Activity 2</a></li>
+                    <li><a href="../Activity_3/act_3.html">Activity 3</a></li>
+                    <li><a href="../Activity_4/index.html">Activity 4</a></li>
+                    <li><a href="../Activity_5/index.html">Activity 5</a></li>
+                    <li><a href="../Activity_6/act_6.html">Activity 6</a></li>
+                    <li><a href="../Activity_7/index.html">Activity 7</a></li>
+                    <li><a href="../Activity_8/js_form.html">Activity 8</a></li>
+                </ul>
+            </li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <div class="bx bx-moon" id="darkmode"></div>
+        </ul>
+    </header>
+<center>
+    <section>
+        <br>
+        <h2 style="font-size: 60px">ACTIVITY - 2</h2>
+        <br>
+
+        <h2><b>Current Day and Time</b></h2>
+    <script>
+        function getCurrentDay() {
+          const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+          const today = new Date();
+          const dayIndex = today.getDay();
+          return daysOfWeek[dayIndex];
+        }
+    
+        function getCurrentTime() {
+          const today = new Date();
+          let hours = today.getHours();
+          const ampm = hours >= 12 ? 'PM' : 'AM';
+          hours = hours % 12 || 12; // Convert to 12-hour format
+          const minutes = today.getMinutes().toString().padStart(2, '0');
+          const seconds = today.getSeconds().toString().padStart(2, '0');
+          return `${hours}${ampm} : ${minutes} : ${seconds}`;
+        }
+    
+        const currentDay = getCurrentDay();
+        const currentTime = getCurrentTime();
+    
+        document.write(`<p>Today is ${currentDay}.</p>`);
+        document.write(`<p>Current time is: ${currentTime}</p>`);
+      </script>
+      <br><br>
+
+      <h2><b>Current Date</b></h2>
+<p id="currentDate"></p>
+<script>
+  function getCurrentDate() {
+    const today = new Date();
+    const month = (today.getMonth() + 1).toString().padStart(2, '0');
+    const day = today.getDate().toString().padStart(2, '0');
+    const year = today.getFullYear().toString().slice(-2); // Get last 2 digits of the year
+    return `${month}-${day}-${year}`;
+  }
+
+  const currentDate = getCurrentDate();
+  document.getElementById('currentDate').textContent = `Current Date: ${currentDate}`;
+</script>
+<br><br>
+
+<h2><b>Print the Current Window</b></h2>
+    <button onclick = "window.print()">Print this page</button>
+</center>
+     <!-- Link To JS -->
+     <script src="../javascript/script.js"></script>
+    </body>
+    </html>

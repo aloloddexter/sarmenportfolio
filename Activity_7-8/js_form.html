@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Activity-8</title>
+</head>
+<body>
+
+      <!--Navbar-->
+    <header>
+        <a href="#" class="logo">Jean Sarmen</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#about">About<i class='bx bx-chevron-down dropdown__icon'></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../personal.html">Personal Background</a></li>
+                    <li><a href="../educational.html">Educational Background</a></li>
+                    <li><a href="../family.html">Family Background</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#Activies">Activities<i class='bx bx-chevron-down dropdown__icon'></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../Activity_1/sarmen.html">Activity 1</a></li>
+                    <li><a href="../Activity_2/act_2.html">Activity 2</a></li>
+                    <li><a href="../Activity_3/act_3.html">Activity 3</a></li>
+                    <li><a href="../Activity_4/index.html">Activity 4</a></li>
+                    <li><a href="../Activity_5/index.html">Activity 5</a></li>
+                    <li><a href="../Activity_6/act_6.html">Activity 6</a></li>
+                    <li><a href="../Activity_7-8/index.html">Activity 7</a></li>
+                    <li><a href="../Activity_7-8/js_form.html">Activity 8</a></li>
+                </ul>
+            </li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <div class="bx bx-moon" id="darkmode"></div>
+        </ul>
+    </header>
+
+<center>
+    <section>
+    <br>
+    <h2 style="font-size: 60px">ACTIVITY - 8</h2>
+    <br>
+    <h2>FRINGE BENEFITS</h2>
+
+    <form id="salaryForm">
+        <label for="salary"><h2>Salary:</h2></label>
+        <input type="number" id="salary" required>
+        
+        <label for="loans"><h2>Loans:</h2></label>
+        <input type="number" id="loans" required> 
+    </form>
+
+    <div id="result">
+        <h3>Deductions:</h3>
+        <p id="gsis">GSIS: </p>
+        <p id="sss">SSS: </p>
+        <p id="phic">PHIC: </p>
+        <p id="pagibig">PAG-IBIG: </p>
+        <p id="tax">TAX: </p>
+
+        <h3>NET PAY: <span id="netPay"></span></h3><br>
+        <button type="button" onclick="calculateNetPay()"><h2>Submit</h2></button>
+    </div>
+</section>
+</center>
+    <script>
+        function calculateNetPay() {
+            // Get values from the form
+            const salary = parseFloat(document.getElementById('salary').value);
+            const loans = parseFloat(document.getElementById('loans').value);
+
+            // Calculate deductions
+            const gsis = 0.05 * salary;
+            const sss = 0.03 * salary;
+            const phic = 0.02 * salary;
+            const pagibig = 0.015 * salary;
+            const tax = 0.05 * salary;
+
+            // Calculate total deductions
+            const totalDeductions = gsis + sss + phic + pagibig + tax;
+
+            // Calculate net pay
+            const netPay = salary - totalDeductions - loans;
+
+            // Display the results
+            document.getElementById('gsis').textContent = `GSIS: ${gsis.toFixed(2)}`;
+            document.getElementById('sss').textContent = `SSS: ${sss.toFixed(2)}`;
+            document.getElementById('phic').textContent = `PHIC: ${phic.toFixed(2)}`;
+            document.getElementById('pagibig').textContent = `PAG-IBIG: ${pagibig.toFixed(2)}`;
+            document.getElementById('tax').textContent = `TAX: ${tax.toFixed(2)}`;
+            document.getElementById('netPay').textContent = netPay.toFixed(2);
+        }
+    </script>
+
+<!-- Link To JS -->
+<script src="../javascript/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Jean Sarmen</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Box Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script>
+        function multiply() {
+            var number1 = parseFloat(document.getElementById("number1").value);
+            var number2 = parseFloat(document.getElementById("number2").value);
+            
+            if(isNaN(number1) || isNaN(number2)) {
+                alert("Please fill in both numbers.");
+                return;
+            } else {
+                alert("Result: " + (number1 * number2));
+            }
+        }
+
+        function divide() {
+            var number1 = parseFloat(document.getElementById("number1").value);
+            var number2 = parseFloat(document.getElementById("number2").value);
+            if(number2 === 0){
+                alert("Cannot divide by zero");
+            } else {
+                alert("Result: " + (number1 / number2));
+            }
+            
+            if(isNaN(number1) || isNaN(number2)) {
+                alert("Please fill in both numbers.");
+            } 
+        }
+    </script>
+</head>
+
+<body>
+    <!--Navbar-->
+    <header>
+        <a href="#" class="logo">Jean Sarmen</a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+        <ul class="navbar">
+            <li><a href="../index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="#about">About<i class='bx bx-chevron-down dropdown__icon'></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../personal.html">Personal Background</a></li>
+                    <li><a href="../educational.html">Educational Background</a></li>
+                    <li><a href="../family.html">Family Background</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#Activies">Activities<i class='bx bx-chevron-down dropdown__icon'></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="../Activity_1/sarmen.html">Activity 1</a></li>
+                    <li><a href="../Activity_2/act_3.html">Activity 2</a></li>
+                    <li><a href="../Activity_3/act_3.html">Activity 3</a></li>
+                    <li><a href="../Activity_4/index.html">Activity 4</a></li>
+                    <li><a href="../Activity_5/act_3.html">Activity 5</a></li>
+                    <li><a href="../Activity_6/act_6.html">Activity 6</a></li>
+                    <li><a href="../Activity_7-8/index.html">Activity 7</a></li>
+                    <li><a href="../Activity_7-8/js_form.html">Activity 8</a></li>
+                </ul>
+            </li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <div class="bx bx-moon" id="darkmode"></div>
+        </ul>
+</header>
+
+<center>
+<section>
+    <br>
+    <h2 style="font-size: 60px">ACTIVITY - 6</h2>
+    <br>
+    <label for="number1">1st Number:</label>
+    <input type="number" id="number1" required><br><br>
+    <label for="number2">2nd Number:</label>
+    <input type="number" id="number2" required><br><br>
+
+    <button type="button" onclick="add()">Add</button>
+    <button type="button" onclick="subtract()">Subtract</button>
+    <button type="button" onclick="multiply()">Multiply</button>
+    <button type="button" onclick="divide()">Divide</button>
+</section>    
+</center>
+    <script>
+        function subtract() {
+            var number1 = parseFloat(document.getElementById("number1").value);
+            var number2 = parseFloat(document.getElementById("number2").value);
+            if(isNaN(number1) || isNaN(number2)) {
+                alert("Please fill in both numbers.");
+            } else {
+                alert("Result: " + (number1 - number2));
+            }
+        }
+
+        function add() {
+            var number1 = parseFloat(document.getElementById("number1").value);
+            var number2 = parseFloat(document.getElementById("number2").value);
+            if(isNaN(number1) || isNaN(number2)) {
+                alert("Please fill in both numbers.");
+            } else {
+                alert("Result: " + (number1 + number2));
+            }
+        }
+    </script>
+
+    <!-- Link To JS -->
+    <script src="../javascript/script.js"></script>
+</body>
+</html>
